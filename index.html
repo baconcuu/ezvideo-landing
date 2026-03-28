@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EzVideo | The Autonomous Video Editing Agent</title>
+    <meta name="description" content="EzVideo is an AI-first IDE for video creation. Powered exactly by Google Gemini, Veo3, and Nano-Banana-Pro.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Ez<span>Video</span></div>
+        <div class="nav-links">
+            <a href="#vision">The Vision</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#business">Business Models</a>
+        </div>
+        <a href="#download" class="btn-primary small">Join Beta Waitlist</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">Powered by Google Gemini & Veo 3</div>
+            <h1 class="hero-title">The First IDE for <span class="gradient-text">Video Generation</span></h1>
+            <p class="hero-subtitle">Experience video editing like an IDE. A powerful software with a Sidebar Chat Agent. You command, and Google Gemini directs, generates assets, and edits the timeline autonomously.</p>
+            <div class="hero-cta">
+                <a href="#download" class="btn-primary">Get Early Access</a>
+            </div>
+        </div>
+        <div class="hero-visual" style="max-width: 1000px; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); margin: 0 auto; display: block; margin-top: 2rem; position: relative;">
+            <video id="pitchVideo" src="https://pub-db1451f7ad144271af23c9289cbafdad.r2.dev/ezvideo-pitch.mp4" autoplay loop muted playsinline style="width: 100%; height: auto; display: block;"></video>
+            <!-- Click-to-unmute overlay -->
+            <button id="muteToggle" onclick="toggleMute()" style="
+                position: absolute;
+                bottom: 16px;
+                right: 16px;
+                background: rgba(0,0,0,0.6);
+                backdrop-filter: blur(8px);
+                border: 1px solid rgba(255,255,255,0.2);
+                color: #fff;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                transition: background 0.2s;
+                z-index: 10;
+            ">
+                🔇 Tap to unmute
+            </button>
+        </div>
+    </header>
+
+    <!-- HOW IT WORKS (BETA) -->
+    <section id="how-it-works" class="features">
+        <h2 class="section-title">How It Works <span style="font-size:1.5rem; color:var(--text-muted);">(Current Beta)</span></h2>
+        <p style="color: var(--text-muted); max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem;">
+            Currently in our Beta phase, the entire creative workflow is fully delegated to our AI Director. Here is the exact technical pipeline happening under the hood:
+        </p>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">🧠</div>
+                <h3>1. Gemini Director</h3>
+                <p>Google Gemini acts as the absolute brain. It reads your prompt, writes the script, and acts as the "Film Director" orchestrating all visual and auditory elements.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🖼️</div>
+                <h3>2. Nano-Banana-Pro & Veo3</h3>
+                <p>Gemini calls Google's <code>nano-banana-pro</code> API for stunning static imagery and Google <code>Veo 3</code> API to generate fluid, high-quality video b-rolls.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎙️</div>
+                <h3>3. Local Voice & Dynamics</h3>
+                <p>Voice generation (TTS) runs locally for zero-latency. AI automatically generates synchronized auto-captions and seamless Lottie animations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎬</div>
+                <h3>4. Autonomous Edit</h3>
+                <p>No human cutting needed. The AI aligns the generated video, images, audio, and captions perfectly into a timeline configuration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUSINESS MODELS -->
+    <section id="business" class="technology" style="flex-direction: column; align-items: flex-start;">
+        <h2 class="section-title left" style="margin-bottom: 2rem;">Dual Escalation Strategy</h2>
+        <div style="display: flex; gap: 4rem; width: 100%; flex-wrap: wrap;">
+            <div class="tech-content" style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                <h3><span class="icon">💻</span> Model 1: The Creator IDE (Subscription)</h3>
+                <p>A downloadable desktop software exactly like a coding IDE. Users subscribe to access the Gemini Sidebar Agent. The heavy lifting of final video rendering is done on the <strong>User's Local GPU/CPU</strong> via Remotion. This eliminates our server rendering costs, making it a highly profitable SaaS.</p>
+            </div>
+            <div class="tech-content" style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                <h3><span class="icon">☁️</span> Model 2: Enterprise API Hub</h3>
+                <p>A B2B Pay-as-you-go API service. Businesses send a prompt, and we return an MP4. This requires us to maintain scalable server farms (AWS EC2/Máy Mạnh) to render videos rapidly. Built for mass automation and high-ticket enterprise clients.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE FUTURE VISION -->
+    <section id="vision" class="features" style="background: radial-gradient(circle at center, rgba(79,70,229,0.1), transparent 70%);">
+        <h2 class="section-title">The Future Vision</h2>
+        <p style="color: var(--text-muted); max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
+            Today, Gemini directs scenes block by block. Tomorrow, when the final product is complete, EzVideo will allow <strong>hyper-granular pixel edits</strong>. Instead of just replacing scenes, the AI will perform deep in-painting directly inside the generated video, replacing specific objects, adjusting lighting on the fly, and manipulating timeline vectors with absolute precision.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section id="download" class="cta-section">
+        <h2>Change how the world edits.</h2>
+        <p>Join the waitlist for the EzVideo IDE and the Enterprise API.</p>
+        <form class="waitlist-form" onsubmit="event.preventDefault(); alert('We will contact you soon!');">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn-primary">Get Access</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EzVideo.net - Accelerating Video Autonomy.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
